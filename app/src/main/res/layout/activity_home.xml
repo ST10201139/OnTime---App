@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/theme_background">
+
+    <!-- Logo or other content -->
+
+    <!-- Welcome message -->
+
+    <!-- Welcome message -->
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:importantForAccessibility="no"
+        app:srcCompat="@drawable/logo" />
+
+    <!-- Descriptive text -->
+    <TextView
+        android:id="@+id/welcomeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView2"
+        android:layout_marginTop="20dp"
+
+        android:elevation="4dp"
+        android:shadowColor="#A0000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:text="@string/welcome_to_our_app"
+        android:textColor="#32a881"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/descriptiveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeMessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/ontime_is_a_productivity_app_designed_to_help_users_manage_their_time_efficiently_and_effectively"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:elevation="4dp"
+        android:shadowColor="#A0000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
+
+    <!-- Instructions -->
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptiveText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="@string/how_to_navigate"
+        android:textColor="#32a881"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:elevation="4dp"
+        android:shadowColor="#A0000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
+
+    <TextView
+        android:id="@+id/instructionsDetail"
+        android:layout_width="405dp"
+        android:layout_height="278dp"
+        android:layout_below="@id/instructions"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/_1_view_time_entries_nclick_on_the_eye_icon_in_the_bottom_navigation_bar_this_will_take_you_to_a_screen_where_you_can_view_your_time_entries_or_activities_logged_in_the_app_n_n2_add_time_entries_nclick_on_entry_and_pen_icon_in_the_bottom_navigation_bar_this_will_navigate_you_to_a_screen_where_you_can_add_new_time_entries_or_log_new_activities_n_n3_view_goals_ntap_on_the_trophy_icon_in_the_bottom_navigation_bar_you_will_be_directed_to_a_screen_where_you_can_view_and_manage_your_set_goals_or_objectives_n_n4_view_total_hours_nselect_the_view_category_icon_with_the_plus_sign_in_the_bottom_navigation_bar_this_will_lead_you_to_a_screen_where_you_can_view_the_total_hours_spent_on_different_categories_or_activities"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:elevation="4dp"
+        android:shadowColor="#A0000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
+
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="#00bbf2"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>

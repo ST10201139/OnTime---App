@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTimeEntries"
+    android:background="@drawable/theme_background">
+
+    <!-- EditText for Name -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="334dp"
+        android:layout_height="83dp"
+        android:adjustViewBounds="true"
+        android:importantForAccessibility="no"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#81D4FA"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        tools:ignore="TextContrastCheck,VisualLintTextFieldSize"
+        android:importantForAutofill="no" />
+
+    <!-- EditText for Description -->
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#81D4FA"
+        android:hint="@string/description"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextName"
+        tools:ignore="TextContrastCheck,VisualLintTextFieldSize"
+        android:importantForAutofill="no" />
+
+    <!-- EditText for Start Date -->
+    <EditText
+        android:id="@+id/editTextStartDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#81D4FA"
+        android:clickable="true"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:hint="@string/start_date"
+        android:importantForAccessibility="no"
+        android:importantForAutofill="no"
+        android:inputType="none"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextDescription"
+        tools:ignore="TextContrastCheck,TextFields,VisualLintTextFieldSize" />
+
+    <!-- EditText for End Date -->
+    <EditText
+        android:id="@+id/editTextEndDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#81D4FA"
+        android:clickable="true"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:hint="@string/end_date"
+        android:importantForAccessibility="no"
+        android:importantForAutofill="no"
+        android:inputType="none"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextStartDate"
+        tools:ignore="TextContrastCheck,TextFields,VisualLintTextFieldSize" />
+
+    <!-- Spinner for Categories -->
+    <Spinner
+        android:id="@+id/spinnerCategories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#81D4FA"
+        android:entries="@array/spinner_items"
+        android:hint="@string/select_category"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextEndDate"
+        tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+    <!-- Buttons for Start Time and End Time -->
+
+    <!-- Buttons for Camera and Upload -->
+
+    <!-- Save Entry Button -->
+
+    <Button
+        android:id="@+id/btnStartTimer"
+        android:layout_width="100dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="12dp"
+
+        android:text="@string/start_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerCategories" />
+
+    <Button
+        android:id="@+id/btnEndTimer"
+        android:layout_width="100dp"
+        android:layout_height="59dp"
+
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/end_time"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSave"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toEndOf="@+id/btnStartTimer"
+        app:layout_constraintTop_toTopOf="@+id/spinnerCategories" />
+
+    <Button
+        android:id="@+id/buttonCamera"
+        android:layout_width="100dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/camera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnStartTimer"
+        tools:ignore="VisualLintBounds" />
+
+    <Button
+        android:id="@+id/buttonUpload"
+        android:layout_width="142dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/upload_image"
+        app:layout_constraintStart_toEndOf="@id/buttonCamera"
+        app:layout_constraintTop_toTopOf="@id/buttonCamera"
+        tools:ignore="VisualLintBounds" />
+
+    <!-- ImageView -->
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="98dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/save_entry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="@+id/buttonUpload"
+        app:layout_constraintTop_toBottomOf="@+id/btnEndTimer"
+        tools:ignore="VisualLintBounds" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="170dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="12dp"
+        android:adjustViewBounds="true"
+        android:importantForAccessibility="no"
+        android:scaleType="fitXY"
+        android:src="@drawable/placeholder_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonSave"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ImageContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
